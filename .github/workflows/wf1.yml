@@ -1,0 +1,13 @@
+name: wf1
+
+on:
+  push:
+    branches: [ * ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run command
+        run: |
+          echo "I was executed"

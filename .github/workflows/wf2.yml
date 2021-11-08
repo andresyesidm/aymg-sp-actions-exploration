@@ -1,0 +1,14 @@
+name: wf2
+
+on:
+  workflow_run:
+    workflows: ["wf1"]
+    types: [completed]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run command
+        run: |
+          echo "I am validation workflow"
