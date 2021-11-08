@@ -14,3 +14,4 @@ jobs:
       - name: Run command
         run: |
           echo "I am validation workflow"
+          echo ${{ github.event.head_commit.message }}
