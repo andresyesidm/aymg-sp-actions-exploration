@@ -11,3 +11,4 @@ jobs:
       - name: Run command
         run: |
           echo "I was executed"
+          echo ${{ github }}
