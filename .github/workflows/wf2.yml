@@ -2,16 +2,16 @@ name: wf2
 
 on:
   workflow_run:
-    workflows: ['wf1']
+    workflows: [ "wf1" ]
     branches: [ main ]
-    types: [completed]
+    types: [ completed ]
 
 jobs:
   release:
     runs-on: ubuntu-latest
     if: |
       github.event.workflow_run.conclusion == 'success' &&
-      true
+      false
     steps:
       - name: Run command
         run: |
